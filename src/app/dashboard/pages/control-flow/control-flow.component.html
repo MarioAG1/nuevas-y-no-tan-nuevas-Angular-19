@@ -9,3 +9,22 @@
     }
   </div>
 </section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+  <div class="bg-white rounded-2xl shadow p-10">
+    <h2 class="text-2xl">{{ grade() }}</h2>
+    @switch (grade()) {
+      @case ('A') {
+        <p>Arriba de 90</p>
+      }
+      @case ('B') {
+        <p>Arriba de 80</p>
+      }
+      @case ('F') {
+        <p>Suspenso</p>
+      }
+      @default {
+        <p>Las notas no están subidas</p>
+      }
+    }
+  </div>
+</section>
