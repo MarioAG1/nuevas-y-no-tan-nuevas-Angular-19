@@ -28,3 +28,35 @@
     }
   </div>
 </section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+  <div class="bg-white rounded-2xl shadow p-10">
+    <ul>
+      @for (
+        framework of frameworks();
+        track framework;
+        let i = $index, first = $first, last = $last, even = $even, odd = $odd, count = $count
+      ) {
+        <li
+          [class]="{
+            'bg-red-100': even && !first && !last,
+            'bg-pink-100': odd && !first && !last,
+            'bg-blue-100': first || last,
+          }"
+        >
+          {{ i + 1 }}/{{ count }} - {{ framework }}
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+  <div class="bg-white rounded-2xl shadow p-10">
+    <ul>
+      @for (framework of frameworks2(); track framework) {
+        <li>{{ framework }}</li>
+      } @empty {
+        <li>No hay frameworks en frameworks2</li>
+      }
+    </ul>
+  </div>
+</section>
