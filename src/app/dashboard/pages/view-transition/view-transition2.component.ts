@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
-  selector: 'app-view-transition',
+  selector: 'app-view-transition2',
   imports: [CommonModule, TitleComponent],
   template: `
-    <app-title title="View Transition 1" />
+    <app-title title="View Transition 2" />
 
     <section class="flex justify-start">
       <img
@@ -21,4 +21,4 @@ import { TitleComponent } from '@shared/title/title.component';
     </section>
   `,
 })
-export default class ViewTransitionComponent {}
+export default class ViewTransition2Component {}
