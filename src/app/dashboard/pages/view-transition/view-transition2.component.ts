@@ -8,7 +8,7 @@ import { TitleComponent } from '@shared/title/title.component';
   template: `
     <app-title title="View Transition 2" />
 
-    <section class="flex justify-start">
+    <section class="flex justify-end">
       <img
         srcset="https://picsum.photos/id/237/200/300"
         alt="Picsum"
@@ -17,7 +17,10 @@ import { TitleComponent } from '@shared/title/title.component';
         style="view-transition-name: hero1"
       />
 
-      <div class="bg-blue-500 w-56 h-56" style="view-transition-name: hero2"></div>
+      <div
+        class="bg-blue-800 fixed bottom-16 w-32 h-32 rounded"
+        style="view-transition-name: hero2"
+      ></div>
     </section>
   `,
 })
